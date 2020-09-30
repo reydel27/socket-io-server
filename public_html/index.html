@@ -22,18 +22,9 @@
         });   
         
         socket.emit('message', { device: 'web browser'});
-
-        socket.on('send-message', function(payload) {
-            console.log('Received:', payload);
-        });
         
         socket.on('message', function(payload) {
             console.log('Listen:', payload);
-        });
-
-        socket.on('active-bands', function(bands) {
-            console.clear();
-            console.table(bands);
         });
     </script>
 </body>
